@@ -10,6 +10,7 @@ const TodosContext = React.createContext({
 
 		{ id: 3, text: 'make bed', complete: false },
 	],
+	currentTodo: {},
 })
 
 export default TodosContext
