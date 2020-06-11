@@ -1,10 +1,11 @@
 /** @format */
 
-import React, { useContext, useReducer } from 'react'
+import React, { useContext, useState, useReducer } from 'react'
 import ReactDOM from 'react-dom'
 import * as serviceWorker from './serviceWorker'
 import TodosContext from './context'
 import TodosReducer from './reducer'
+import TodoForm from './components/TodoForm'
 
 import TodoList from './components/TodoList'
 
@@ -14,6 +15,7 @@ const App = () => {
 
 	return (
 		<TodosContext.Provider value={{ state, dispatch }}>
+			<TodoForm />
 			<TodoList />
 		</TodosContext.Provider>
 	)
